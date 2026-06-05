@@ -38,7 +38,7 @@ Final Output:
 
 ### 1.1 Scenario C: Creative Content
 ### 1.2 Iteration Documentation
-# Iteration Documentation – Scenario A
+### Iteration Documentation – Scenario A
 
 | Version | Prompt                                                                                                                                                                                                                                                                        | What Changed                                                 | Why This Improved the Output                                                   |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------ |
@@ -46,7 +46,7 @@ Final Output:
 | V2      | You are an elementary school teacher explaining science to children. Explain neural networks to a 10-year-old using simple language and a real-world analogy.                                                                                                                 | Added role assignment and analogy requirement.               | Improved clarity and made the explanation easier for children to understand.   |
 | V3      | You are a fun and friendly elementary school teacher. Explain neural networks to a curious 10-year-old using a simple analogy related to how the human brain learns. Avoid technical jargon. Use short sentences, one real-life example, and end with a fun summary sentence. | Added tone, structure, constraints, and contextual guidance. | Produced a more engaging, age-appropriate, and easy-to-understand explanation. |
 
-# Iteration Documentation – Scenario B
+### Iteration Documentation – Scenario B
 
 | Version | Prompt                                                                                                                                                                                                                                                                                                                                                                                  | What Changed                                                            | Why This Improved the Output                                                 |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
@@ -54,7 +54,7 @@ Final Output:
 | V2      | You are an HR communication expert. Write a polite and professional email declining a job offer while expressing gratitude and interest in future opportunities.                                                                                                                                                                                                                        | Added professional role and future relationship context.                | Improved professionalism and diplomacy in the email.                         |
 | V3      | You are a senior corporate professional writing a thoughtful business email. Draft a concise and polite email declining a job offer because the candidate has decided to pursue another opportunity. Express sincere gratitude, appreciation for the interview process, and interest in staying connected for future opportunities. Maintain a warm, respectful, and professional tone. | Added detailed context, tone expectations, and communication objective. | Generated a polished, realistic, and emotionally intelligent business email. |
 
-# Iteration Documentation – Scenario C
+### Iteration Documentation – Scenario C
 
 | Version | Prompt                                                                                                                                                                                                                                                                                                                                            | What Changed                                                 | Why This Improved the Output                                |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------- |
