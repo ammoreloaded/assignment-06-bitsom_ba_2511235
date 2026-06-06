@@ -177,24 +177,217 @@ Creating a short story opening (2–3 sentences)
 
 ## 2.2 Analysis & Recommendations
 
-Low temperature settings are most useful when accuracy, consistency, and reliability are important. For example, low temperature is ideal for generating technical documentation, business reports, coding assistance, legal drafts, or customer support responses where predictable and factual outputs are required.
+Low temperature settings are most useful when accuracy, consistency, and reliability are important. For example, ideal for generating technical documentation, business reports, coding assistance, legal drafts, or customer support responses where predictable and factual outputs are required.
 
 High temperature settings are better suited for creative and exploratory tasks. They work well for brainstorming marketing ideas, writing stories, generating creative taglines, or producing innovative product concepts because they encourage diverse and less predictable outputs.
 
-For this assignment task, the medium temperature setting worked best because it balanced creativity with coherence. The output remained imaginative and engaging while still maintaining a logical and readable narrative structure. The high temperature output was highly creative but slightly less predictable, while the low temperature output felt too plain for storytelling purposes.
+The medium temperature setting worked best in this case because it balanced creativity with coherence. The output remained imaginative and engaging while still maintaining a logical and readable narrative structure. The high temperature output was highly creative but slightly less predictable, while the low temperature output felt too plain for storytelling purposes.
 
 
 
 
 
 ## Part 3: Strategic Prompting Techniques
-### 3.1 Chain-of-Thought Prompting
-### 3.2 Few-Shot Prompting
 
-## Part 4: Responsible AI & Limitations
-### 4.1 Testing for Hallucinations
-### 4.2 Testing for Bias
-### 4.3 Limitations & Responsible Use
+## 3.1 Chain-of-Thought Prompting
+
+## Selected Problem – Option B: Multi-Step Reasoning
+
+### Problem Statement
+
+> A company has 150 employees. 60% work in engineering, 25% in sales, and the rest in operations. If the company plans to hire 20% more engineers and 10% more sales people, how many total employees will there be after hiring?
+
+----------
+
+# Without Chain-of-Thought
+
+## Prompt
+
+> Calculate the total number of employees after hiring.
+
+----------
+
+## LLM Output
+
+> The company will have 171 employees after hiring.
+
+----------
+
+# With Chain-of-Thought
+
+## Prompt
+
+> Let's solve this step by step.  
+> A company has 150 employees. 60% work in engineering, 25% in sales, and the rest in operations. If the company plans to hire 20% more engineers and 10% more sales people, how many total employees will there be after hiring?
+
+----------
+
+## LLM Output with Reasoning
+
+> Step 1: Calculate the number of employees in each department.
+> 
+> -   Engineering = 60% of 150  
+>     = 0.60 × 150  
+>     = 90 employees
+>     
+> -   Sales = 25% of 150  
+>     = 0.25 × 150  
+>     = 37.5 employees
+>     
+> -   Operations = Remaining employees  
+>     = 150 − 90 − 37.5  
+>     = 22.5 employees
+>     
+> 
+> Step 2: Calculate the additional hires.
+> 
+> -   New engineers hired = 20% of 90  
+>     = 18 employees
+>     
+> -   New sales employees hired = 10% of 37.5  
+>     = 3.75 employees
+>     
+> 
+> Step 3: Calculate the final total employees.
+> 
+> Total employees after hiring  
+> = 150 + 18 + 3.75  
+> = 171.75
+> 
+> Since employee counts are usually whole numbers, the approximate total is 172 employees.
+
+----------
+
+# Comparison & Analysis
+
+The output without chain-of-thought provided only the final answer without explaining how it was calculated. In contrast, the chain-of-thought prompt generated a detailed step-by-step breakdown of the reasoning process, making the calculation easier to understand and verify.
+
+Chain-of-thought prompting is especially useful for complex reasoning, mathematical calculations, planning tasks, and multi-step logic problems because it encourages the model to process information systematically rather than jumping directly to an answer.
+
+One limitation observed is that chain-of-thought responses can become longer and very wordy, which may not always be desirable for simple questions where concise answers are preferred.
+
+----------
+
+# 3.2 Few-Shot Prompting
+
+## Step 1: Zero-Shot Attempt
+
+### Zero-Shot Prompt
+
+> Classify the sentiment of the following customer reviews as Positive, Negative, or Neutral.
+
+----------
+
+## Zero-Shot Results
+
+
+"The product arrived damaged and customer service was unhelpful."
+
+Negative
+
+"Works as expected, nothing special but does the job."
+
+Neutral
+
+"Absolutely love this! Best purchase I've made all year!"
+
+Positive
+
+"The quality is okay but slightly overpriced for what you get."
+
+Neutral
+
+"Terrible experience, would not recommend to anyone."
+
+Negative
+
+----------
+
+# Step 2: Few-Shot Attempt
+
+## Few-Shot Prompt
+
+> Classify customer reviews as Positive, Negative, or Neutral.
+> 
+> Example 1:  
+> Review: "This product exceeded my expectations!"  
+> Sentiment: Positive
+> 
+> Example 2:  
+> Review: "Completely broke after one week of use."  
+> Sentiment: Negative
+> 
+> Example 3:  
+> Review: "It's fine, does what it says on the box."  
+> Sentiment: Neutral
+> 
+> Example 4:  
+> Review: "Amazing quality and fast delivery."  
+> Sentiment: Positive
+> 
+> Example 5:  
+> Review: "Customer support never responded to my issue."  
+> Sentiment: Negative
+> 
+> Now classify the previous 5 examples:
+> 
+> 1.  "The product arrived damaged and customer service was unhelpful."
+>     
+> 2.  "Works as expected, nothing special but does the job."
+>     
+> 3.  "Absolutely love this! Best purchase I've made all year!"
+>     
+> 4.  "The quality is okay but slightly overpriced for what you get."
+>     
+> 5.  "Terrible experience, would not recommend to anyone."
+>     
+
+----------
+
+## Few-Shot Results
+
+"The product arrived damaged and customer service was unhelpful."
+
+Negative
+
+"Works as expected, nothing special but does the job."
+
+Neutral
+
+"Absolutely love this! Best purchase I've made all year!"
+
+Positive
+
+"The quality is okay but slightly overpriced for what you get."
+
+Neutral
+
+"Terrible experience, would not recommend to anyone."
+
+Negative
+
+----------
+
+### Step 3: Comparison Table
+
+| Review # | Zero-Shot Result | Few-Shot Result | Correct Label | Improved? |
+| -------- | ---------------- | --------------- | ------------- | --------- |
+| 1        | Negative         | Negative        | Negative      | No        |
+| 2        | Neutral          | Neutral         | Neutral       | No        |
+| 3        | Positive         | Positive        | Positive      | No        |
+| 4        | Neutral          | Neutral         | Neutral       | No        |
+| 5        | Negative         | Negative        | Negative      | No        |
+
+
+
+# Few-Shot Prompting Analysis
+
+Few-shot prompting is most useful when tasks require consistent formatting, domain-specific understanding, or nuanced classification rules. By providing examples, the LLM better understands the expected output structure and decision patterns.
+
+Few-shot prompting is especially effective for sentiment analysis, structured data extraction, customer support categorization, and specialized business workflows where examples help reduce ambiguity and improve response consistency.
+
+
+
 
 ## Part 4: Responsible AI & Limitations
 
@@ -240,7 +433,7 @@ One effective strategy to reduce hallucinations is to explicitly instruct the LL
 
 ### 4.2 Testing for Bias
 
-### Selected Test – Option A: Gender Bias
+### Option A: Gender Bias
 
 ---
 
@@ -291,4 +484,3 @@ Rephrasing prompts to explicitly avoid stereotypes helps generate more neutral a
 During this assignment, several limitations of LLMs became noticeable. First, LLMs can generate hallucinations by confidently producing false or fabricated information when they lack accurate knowledge. Second, reasoning can sometimes be inconsistent, especially in complex multi-step problems or ambiguous scenarios. Third, LLM responses may reflect societal or cultural biases present in training data, leading to stereotypical or unbalanced outputs.
 
 To use LLMs responsibly, outputs should always be verified when dealing with important information such as academic research, legal advice, healthcare, financial analysis, or business decision-making. LLMs are not suitable for tasks requiring guaranteed factual accuracy, emotional judgment, or final decision authority without human review. Ethical use of LLMs involves being transparent about AI assistance, avoiding plagiarism, validating critical information, and using AI as a support tool rather than a replacement for human expertise and accountability.
-
