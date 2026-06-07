@@ -1,7 +1,7 @@
 # Prompt Engineering Portfolio
-Name: [Your Name]
-Date: [Submission Date]
-LLM Used: [e.g., ChatGPT-4, Claude 3.5 Sonnet, Gemini Pro]
+Name: Ankit Singh
+Date: 7th June, 2026
+LLM Used: ChatGPT-4
 
 ## Part 1: Prompt Design & Iteration
 ### 1.1 Scenario A: Technical Explanation
@@ -103,7 +103,7 @@ For example, in the neural network explanation scenario, adding the role of a te
 
 ## Part 2: Temperature & Parameter Control
 
-## 2.1 Temperature Experimentation
+### 2.1 Temperature Experimentation
 
 ### Selected Task
 
@@ -111,13 +111,13 @@ Creating a short story opening (2–3 sentences)
 
 ---
 
-## Base Prompt
+### Base Prompt
 
 > A traveler discovers a mysterious glowing door in the middle of a forest at midnight.
 
 ---
 
-# Low Temperature Test (0.2)
+### Low Temperature Test (0.2)
 
 ### Prompt Used
 
@@ -133,7 +133,7 @@ Creating a short story opening (2–3 sentences)
 
 ---
 
-# Medium Temperature Test (0.7)
+### Medium Temperature Test (0.7)
 
 ### Prompt Used
 
@@ -149,7 +149,7 @@ Creating a short story opening (2–3 sentences)
 
 ---
 
-# High Temperature Test (1.3)
+### High Temperature Test (1.3)
 
 ### Prompt Used
 
@@ -165,7 +165,7 @@ Creating a short story opening (2–3 sentences)
 
 ---
 
-# Comparison Table
+### Comparison Table
 
 | Temperature  | Characteristics of Output                             | Creativity Level | Predictability  | Best Use Case                           |
 | ------------ | ----------------------------------------------------- | ---------------- | --------------- | --------------------------------------- |
@@ -175,7 +175,7 @@ Creating a short story opening (2–3 sentences)
 
 ---
 
-## 2.2 Analysis & Recommendations
+### 2.2 Analysis & Recommendations
 
 Low temperature settings are most useful when accuracy, consistency, and reliability are important. For example, ideal for generating technical documentation, business reports, coding assistance, legal drafts, or customer support responses where predictable and factual outputs are required.
 
@@ -189,9 +189,9 @@ The medium temperature setting worked best in this case because it balanced crea
 
 ## Part 3: Strategic Prompting Techniques
 
-## 3.1 Chain-of-Thought Prompting
+### 3.1 Chain-of-Thought Prompting
 
-## Selected Problem – Option B: Multi-Step Reasoning
+### Selected Problem – Option B: Multi-Step Reasoning
 
 ### Problem Statement
 
@@ -199,30 +199,30 @@ The medium temperature setting worked best in this case because it balanced crea
 
 ----------
 
-# Without Chain-of-Thought
+### Without Chain-of-Thought
 
-## Prompt
+### Prompt
 
 > Calculate the total number of employees after hiring.
 
 ----------
 
-## LLM Output
+### LLM Output
 
 > The company will have 171 employees after hiring.
 
 ----------
 
-# With Chain-of-Thought
+### With Chain-of-Thought
 
-## Prompt
+### Prompt
 
 > Let's solve this step by step.  
 > A company has 150 employees. 60% work in engineering, 25% in sales, and the rest in operations. If the company plans to hire 20% more engineers and 10% more sales people, how many total employees will there be after hiring?
 
 ----------
 
-## LLM Output with Reasoning
+### LLM Output with Reasoning
 
 > Step 1: Calculate the number of employees in each department.
 > 
@@ -258,7 +258,7 @@ The medium temperature setting worked best in this case because it balanced crea
 
 ----------
 
-# Comparison & Analysis
+### Comparison & Analysis
 
 The output without chain-of-thought provided only the final answer without explaining how it was calculated. In contrast, the chain-of-thought prompt generated a detailed step-by-step breakdown of the reasoning process, making the calculation easier to understand and verify.
 
@@ -268,9 +268,9 @@ One limitation observed is that chain-of-thought responses can become longer and
 
 ----------
 
-# 3.2 Few-Shot Prompting
+### 3.2 Few-Shot Prompting
 
-## Step 1: Zero-Shot Attempt
+### Step 1: Zero-Shot Attempt
 
 ### Zero-Shot Prompt
 
@@ -278,7 +278,7 @@ One limitation observed is that chain-of-thought responses can become longer and
 
 ----------
 
-## Zero-Shot Results
+### Zero-Shot Results
 
 
 "The product arrived damaged and customer service was unhelpful."
@@ -303,9 +303,9 @@ Negative
 
 ----------
 
-# Step 2: Few-Shot Attempt
+### Step 2: Few-Shot Attempt
 
-## Few-Shot Prompt
+### Few-Shot Prompt
 
 > Classify customer reviews as Positive, Negative, or Neutral.
 > 
@@ -344,7 +344,7 @@ Negative
 
 ----------
 
-## Few-Shot Results
+### Few-Shot Results
 
 "The product arrived damaged and customer service was unhelpful."
 
@@ -380,7 +380,7 @@ Negative
 
 
 
-# Few-Shot Prompting Analysis
+### Few-Shot Prompting Analysis
 
 Few-shot prompting is most useful when tasks require consistent formatting, domain-specific understanding, or nuanced classification rules. By providing examples, the LLM better understands the expected output structure and decision patterns.
 
