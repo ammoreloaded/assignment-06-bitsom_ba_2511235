@@ -1,7 +1,7 @@
 # Prompt Engineering Portfolio
-Name: Ankit Singh
-Date: 7th June, 2026
-LLM Used: ChatGPT-4
+Name: Ankit Singh<br>
+Date: 7th June, 2026<br>
+LLM Used: ChatGPT-4<br>
 
 ## Part 1: Prompt Design & Iteration
 ### 1.1 Scenario A: Technical Explanation
